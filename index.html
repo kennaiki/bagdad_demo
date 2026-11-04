@@ -304,8 +304,10 @@ h2{font-size:clamp(34px,4.8vw,62px)}
 .feat h3{font-size:24px}
 @media (max-width:900px){.feat:nth-child(n+3){border-top:1px solid var(--line)}.feat:nth-child(3){padding-left:28px;border-left:1px solid var(--line)}}
 @media (max-width:560px){.feat,.feat+.feat{padding:24px;border:1px solid var(--line)}}
-.about{grid-template-columns:.8fr 1fr;align-items:center}
-.about img{border-radius:999px 999px 18px 18px;aspect-ratio:3/4;filter:none;max-height:620px;border:2px solid rgba(217,174,98,.45);padding:8px;background:var(--bg2)}
+/* фото не выше текста: на компьютере рядом с ним, на телефоне над ним */
+.about{grid-template-columns:.65fr 1fr;align-items:center}
+.about img{border-radius:999px 999px 18px 18px;aspect-ratio:4/5;filter:none;max-height:340px;border:2px solid rgba(217,174,98,.45);padding:8px;background:var(--bg2)}
+@media (max-width:900px){.about{grid-template-columns:1fr;gap:24px}.about img{aspect-ratio:4/3;max-height:none;border-radius:160px 160px 18px 18px}}
 .film{border:0;background:transparent;padding:8px 0}
 .strip img{border-radius:160px 160px 14px 14px;filter:none}
 .ptable{border-top:0;border-radius:22px;background:var(--bg2);border:1px solid var(--line);overflow:clip;padding:0 20px}
